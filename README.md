@@ -1,5 +1,17 @@
-# Task1
+# Task 2
 
-in browser type https://arcane-meadow-12523.herokuapp.com/api/greetings/someName (ex. /api/greeting/Kate) and you should see Hello Kate
+There are routes for working with notes. It is possible to create, edit, delete or view notes.
 
-if no name provided (https://arcane-meadow-12523.herokuapp.com/api/greetings) -- the error should be shown
+GET - /api/notes - returns empty array.
+
+POST - /api/notes - returns note sent in the request.
+
+PUT - /api/notes/:id - returns note sent in the request.
+
+DELETE - /api/notes/:id - returns { success: true, id: 'value of id' }.
+
+
+postman collection of requests is in file [node_task2.postman_collection](https://github.com/katyachok/node-ex/blob/node-develop-task2/node_task2.postman_collection.json)
+
+
+to try in browser follow [link](https://evening-harbor-31701.herokuapp.com/api/notes)
