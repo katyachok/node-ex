@@ -8,6 +8,10 @@
     "start": "node src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "imports": {
+    "#src/*": "./src/*.js",
+    "#errors/*": "./src/errors/*.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/katyachok/node-ex.git"
