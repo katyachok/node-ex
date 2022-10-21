@@ -22,4 +22,4 @@ Validation rules:
 postman collection of requests is in file [node_task3.postman_collection](https://github.com/katyachok/node-ex/blob/node-develop-task2/node_task3.postman_collection.json)
 
 
-to try in browser follow [link](https://evening-harbor-31701.herokuapp.com/api/notes)
+to try in browser follow [link](https://warm-bayou-85750.herokuapp.com/api/notes)

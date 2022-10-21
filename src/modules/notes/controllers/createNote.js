@@ -1,6 +1,6 @@
 import { HttpStatusCode } from '#src/constants';
 import {CustomAPIError} from '#errors/custom-error';
-import { PROVIDE_VALUES, INVALID_REQUEST } from '../constants/index.js';
+import { PROVIDE_VALUES } from '../constants/index.js';
 import { schemas } from '../schemas.js';
 
 export const createNote = (req, res) => {
@@ -15,10 +15,8 @@ export const createNote = (req, res) => {
 	const valid = error == null;
 
 	if (!valid) {
-		return res.status(HttpStatusCode.UNPROCESSABLE_ENTITY).json({
-			message: INVALID_REQUEST,
-			error
-		});
+		throw new CustomAPIError(HttpStatusCode.UNPROCESSABLE_ENTITY, error);
 	}
+
 	return res.status(HttpStatusCode.CREATED).json(req.body);
 };

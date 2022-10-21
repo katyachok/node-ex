@@ -5,16 +5,10 @@ const logger = winston.createLogger({
 	format: winston.format.combine(
 		winston.format.colorize(),
 		winston.format.timestamp(),
-		winston.format.json()
+		winston.format.simple()
 	),
 	transports: [new winston.transports.Console()],
 });
-
-if (process.env.NODE_ENV !== 'production') {
-	logger.add(new winston.transports.Console({
-		format: winston.format.simple(),
-	}));
-}
 
 function logRequest(req, res, next) {
 	logger.info(req.url);
@@ -22,7 +16,7 @@ function logRequest(req, res, next) {
 }
 
 function logError(err, req, res, next) {
-	logger.error(err);
+	logger.error(`${req.url} : ${err}`);
 	next();
 }
 

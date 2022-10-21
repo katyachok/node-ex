@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "9589e45c-1509-48f4-b9d5-150f92da4732",
+		"name": "node_task3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/notes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/notes/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/notes/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"\",\r\n    \"title\": \"some title\",\r\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus commodo tincidunt. Nulla ut lacinia lorem, vel finibus tortor. Sed nibh elit, iaculis et sapien sed, imperdiet ullamcorper quam. Praesent non magna a dui viverra varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sed enim a mi iaculis suscipit. Pellentesque fringilla orci ut consectetur luctus. Sed ultrices tortor risus, non pharetra mi eleifend a. Aenean quis felis ut nisl laor\",\r\n    \"createdAt\": \"2022-10-17T00:00:00.000Z\",\r\n    \"updatedAt\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid title",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"\",\r\n    \"title\": \"\",\r\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus commodo tincidunt. Nulla ut lacinia lorem, vel finibus tortor. Sed nibh elit, iaculis et sapien sed, imperdiet ullamcorper quam. Praesent non magna a dui viverra varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sed enim a mi iaculis suscipit. Pellentesque fringilla orci ut consectetur luctus. Sed ultrices tortor risus, non pharetra mi eleifend a. Aenean quis felis ut nisl laor\",\r\n    \"createdAt\": \"2022-10-17T00:00:00.000Z\",\r\n    \"updatedAt\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid content length",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"title\": \"title\",\r\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus commodo tincidunt. Nulla ut lacinia lorem, vel finibus tortor. Sed nibh elit, iaculis et sapien sed, imperdiet ullamcorper quam. Praesent non magna a dui viverra varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sed enim a mi iaculis suscipit. Pellentesque fringilla orci ut consectetur luctus. Sed ultrices tortor risus, non pharetra mi eleifend a. Aenean quis felis ut nisl laor1\",\r\n    \"createdAt\": \"2022-10-17T00:00:00.000Z\",\r\n    \"updatedAt\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid no content",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"title\": \"title\",\r\n    \"content\": \"\",\r\n    \"createdAt\": \"2022-10-17T00:00:00.000Z\",\r\n    \"updatedAt\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"title\": \"titile\",\r\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus commodo tincidunt. Nulla ut lacinia lorem, vel finibus tortor. Sed nibh elit, iaculis et sapien sed, imperdiet ullamcorper quam. Praesent non magna a dui viverra varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sed enim a mi iaculis suscipit. Pellentesque fringilla orci ut consectetur luctus. Sed ultrices tortor risus, non pharetra mi eleifend a. Aenean quis felis ut nisl laor\",\r\n    \"createdAt\": \"2022-10-17T00:00:00.000Z\",\r\n    \"updatedAt\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/notes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid update no id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"\",\r\n    \"title\": \"title\",\r\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus commodo tincidunt. Nulla ut lacinia lorem, vel finibus tortor. Sed nibh elit, iaculis et sapien sed, imperdiet ullamcorper quam. Praesent non magna a dui viverra varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sed enim a mi iaculis suscipit. Pellentesque fringilla orci ut consectetur luctus. Sed ultrices tortor risus, non pharetra mi eleifend a. Aenean quis felis ut nisl laor\",\r\n    \"createdAt\": \"2022-10-17T00:00:00.000Z\",\r\n    \"updatedAt\": \"2022-10-18T00:00:00.000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/notes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid title length",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"title\": \"ti\",\r\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus commodo tincidunt. Nulla ut lacinia lorem, vel finibus tortor. Sed nibh elit, iaculis et sapien sed, imperdiet ullamcorper quam. Praesent non magna a dui viverra varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sed enim a mi iaculis suscipit. Pellentesque fringilla orci ut consectetur luctus. Sed ultrices tortor risus, non pharetra mi eleifend a. Aenean quis felis ut nisl laor\",\r\n    \"createdAt\": \"2022-10-17T00:00:00.000Z\",\r\n    \"updatedAt\": \"2022-10-18T00:00:00.000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/notes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid content length",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"title\": \"new title\",\r\n    \"content\": \"Lo\",\r\n    \"createdAt\": \"2022-10-17T00:00:00.000Z\",\r\n    \"updatedAt\": \"2022-10-18T00:00:00.000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/notes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
