@@ -1,17 +1,25 @@
-# Task 2
+# Task 3
 
-There are routes for working with notes. It is possible to create, edit, delete or view notes.
+Add validation and logger for requests.
 
-GET - /api/notes - returns empty array.
+Validation rules:
 
-POST - /api/notes - returns note sent in the request.
+`{
 
-PUT - /api/notes/:id - returns note sent in the request.
+    id: required during updating,
 
-DELETE - /api/notes/:id - returns { success: true, id: 'value of id' }.
+    title: required. min 3 characters,
+
+    content: required, min 3 characters, max 500 characters,
+
+    createdAt: date of creation,
+
+    updatedAt: date of update, can be null
+
+}`
 
 
-postman collection of requests is in file [node_task2.postman_collection](https://github.com/katyachok/node-ex/blob/node-develop-task2/node_task2.postman_collection.json)
+postman collection of requests is in file [node_task3.postman_collection](https://github.com/katyachok/node-ex/blob/node-develop-task2/node_task3.postman_collection.json)
 
 
-to try in browser follow [link](https://evening-harbor-31701.herokuapp.com/api/notes)
+to try in browser follow [link](https://warm-bayou-85750.herokuapp.com/api/notes)

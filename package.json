@@ -25,7 +25,9 @@
   },
   "homepage": "https://github.com/katyachok/node-ex#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "joi": "^17.6.3",
+    "winston": "^3.8.2"
   },
   "devDependencies": {
     "eslint": "^8.23.1",
