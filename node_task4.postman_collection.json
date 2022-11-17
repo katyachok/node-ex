@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:5000/api/notes",
+			"name": "get notes",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -26,12 +26,121 @@
 			"response": []
 		},
 		{
+			"name": "get sorted notes by title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/notes?sort=title",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "title"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sorted notes by createdAt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/notes?dateFilters=$gte:2022-10-13,$lte:2022-10-16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes"
+					],
+					"query": [
+						{
+							"key": "dateFilters",
+							"value": "$gte:2022-10-13,$lte:2022-10-16"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get search notes by title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/notes?title=titile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "titile"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get notes with pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/notes?page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"notes"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "http://localhost:5000/api/notes/1",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/notes/3",
+					"raw": "http://localhost:5000/api/notes/6373a536dcfa5cefff4eef95",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -40,7 +149,7 @@
 					"path": [
 						"api",
 						"notes",
-						"3"
+						"6373a536dcfa5cefff4eef95"
 					]
 				}
 			},
@@ -53,7 +162,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"\",\r\n    \"title\": \"some title\",\r\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus commodo tincidunt. Nulla ut lacinia lorem, vel finibus tortor. Sed nibh elit, iaculis et sapien sed, imperdiet ullamcorper quam. Praesent non magna a dui viverra varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sed enim a mi iaculis suscipit. Pellentesque fringilla orci ut consectetur luctus. Sed ultrices tortor risus, non pharetra mi eleifend a. Aenean quis felis ut nisl laor\",\r\n    \"createdAt\": \"2022-10-17T00:00:00.000Z\",\r\n    \"updatedAt\": null\r\n}",
+					"raw": "{\r\n    \"id\": \"\",\r\n    \"title\": \"some title 14\",\r\n    \"content\": \"Lorem ipsum\",\r\n    \"createdAt\": \"2022-11-17T00:00:00.000Z\",\r\n    \"updatedAt\": null\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -82,7 +191,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"\",\r\n    \"title\": \"\",\r\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus commodo tincidunt. Nulla ut lacinia lorem, vel finibus tortor. Sed nibh elit, iaculis et sapien sed, imperdiet ullamcorper quam. Praesent non magna a dui viverra varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sed enim a mi iaculis suscipit. Pellentesque fringilla orci ut consectetur luctus. Sed ultrices tortor risus, non pharetra mi eleifend a. Aenean quis felis ut nisl laor\",\r\n    \"createdAt\": \"2022-10-17T00:00:00.000Z\",\r\n    \"updatedAt\": null\r\n}",
+					"raw": "{\r\n    \"id\": \"\",\r\n    \"title\": \"ti\",\r\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus commodo tincidunt. Nulla ut lacinia lorem, vel finibus tortor. Sed nibh elit, iaculis et sapien sed, imperdiet ullamcorper quam. Praesent non magna a dui viverra varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sed enim a mi iaculis suscipit. Pellentesque fringilla orci ut consectetur luctus. Sed ultrices tortor risus, non pharetra mi eleifend a. Aenean quis felis ut nisl laor\",\r\n    \"createdAt\": \"2022-10-17T00:00:00.000Z\",\r\n    \"updatedAt\": null\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -169,7 +278,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"1\",\r\n    \"title\": \"titile\",\r\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus commodo tincidunt. Nulla ut lacinia lorem, vel finibus tortor. Sed nibh elit, iaculis et sapien sed, imperdiet ullamcorper quam. Praesent non magna a dui viverra varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sed enim a mi iaculis suscipit. Pellentesque fringilla orci ut consectetur luctus. Sed ultrices tortor risus, non pharetra mi eleifend a. Aenean quis felis ut nisl laor\",\r\n    \"createdAt\": \"2022-10-17T00:00:00.000Z\",\r\n    \"updatedAt\": null\r\n}",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"title\": \"titile\",\r\n    \"content\": \"some new content\",\r\n    \"createdAt\": \"2022-10-17T00:00:00.000Z\",\r\n    \"updatedAt\": null\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -177,7 +286,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/notes/1",
+					"raw": "http://localhost:5000/api/notes/63739300b7d97d7a4f3f9971",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -186,7 +295,7 @@
 					"path": [
 						"api",
 						"notes",
-						"1"
+						"63739300b7d97d7a4f3f9971"
 					]
 				}
 			},
