@@ -26,4 +26,4 @@ postman collection of requests is in file [node_task4.postman_collection](https:
 
 
 
-to try in browser follow [link](https://warm-bayou-85750.herokuapp.com/api/notes)
+to try in browser follow [link](https://node-task4.onrender.com/api/notes)
